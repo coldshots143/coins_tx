@@ -16,7 +16,7 @@ mongoose.model("coins_users",
                             _btc_add:{type:String,required:true},
                             _status:{type:String,required:true},
                             _type:{type:String,required:true},
-                            _upline:{type:mongoose.Schema.Types.ObjectId,ref:'coins_users',required:true},
+                            _upline:{type:mongoose.Schema.Types.ObjectId,ref:'coins_users',required:false},
                             _created:{type:Date,default:Date.now}
                         })
                 );

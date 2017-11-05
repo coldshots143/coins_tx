@@ -18,8 +18,6 @@ app.use('/', require('./routes/publicRoutes'));
 
 app.listen(8000);
 
-/*user: "thisAdmin",
-    pwd: "ZxCaSdQwE1@3",
-    */
+
 
 

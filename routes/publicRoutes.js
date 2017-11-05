@@ -45,5 +45,22 @@ publicRoutes.post('/auth',function(req,res)
             {
                 res.send('Hello');
             })
+            .get('/users',function(req,res){
+                mongoose.model('coins_users')
+                .find().exec(function(err,user)
+                {
+                    if(err) throw err;
+                    res.json(user);
+                })
+            })
+            .get('/:info',function(req,res){
+                mongoose.model('coins_users')
+                .findOne({_id:req.params.info},function(err,user)
+                {
+                    if(err) throw err;
+                    res.json(user);
+                })
+            })
+            
 
 module.exports = publicRoutes;

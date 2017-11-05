@@ -3,3 +3,8 @@ module.exports = {
     'database'  : 'mongodb://localhost/coins_tx'
 
 };
+
+/*mongo
+    user: "thisAdmin",
+    pwd: "ZxCaSdQwE1@3",
+*/
