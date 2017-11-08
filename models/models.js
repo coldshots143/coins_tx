@@ -20,5 +20,33 @@ mongoose.model("coins_users",
                             _created:{type:Date,default:Date.now}
                         })
                 );
+
+mongoose.model("coins_dummy_btc",mongoose.Schema({
+                                _btc_add:{type:String,required:true}
+                })
+            );
+
+
+mongoose.model("coins_released",
+               mongoose.Schema({
+                        _total_coins:{type:Number,required:true},
+                        _price:{type:Number,required:true},
+                        _date_release:{type:Date,default:Date.now},
+                        _maximum_coins:{type:Number,required:true},//coins per user to sold
+                        _minimum_coins:{type:Number,required:true}//minimum coins to be sold
+               })
+            );
+
+
+mongoose.model("coins_reserved",mongoose.Schema({
+                _reserved_by:{type:mongoose.Schema.Types.ObjectId,ref:'coins_users',required:false},
+                _pay_here:{type:String,required:true},
+                _expiration:{type:Date},
+                _reservation_made:{type:Date,default:Date.now},
+                _status:{type:String,required:true}
+                })  
+            );
+
+            
 module.exports = mongoose;
 
