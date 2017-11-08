@@ -24,7 +24,8 @@ mongoose.model("coins_users",
 
 mongoose.model("coins_dummy_btc",
                 mongoose.Schema({
-                                _btc_add:{type:String,required:true}
+                                _btc_add:{type:String,required:true},
+                                _status:{type:String,required:true}
                 })
             );
 
@@ -57,6 +58,7 @@ mongoose.model("coins_wallet",
                   _owner:{type:mongoose.Schema.Types.ObjectId,ref:'coins_users',required:false},
                   _balance:{type:Number,default:0},
                   _tx_amount:{type:Number,default:0},
+                  _type:{type:String,requried:true},
                   _created:{type:Date,default:Date.now}
               })
             );
