@@ -16,7 +16,7 @@ app.use('/', require('./routes/publicRoutes'));
 // app.use('/', require('./routes/commonRoutes'));
 
 
-app.listen(8000);
+app.listen(8000,'192.168.1.43');
 
 
 
